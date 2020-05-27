@@ -1,4 +1,6 @@
-on: [pull_request]
+on:
+    pull_request:
+        types: [created]
 
 jobs:
     review_pr_comment:
@@ -7,6 +9,6 @@ jobs:
         steps:
             - name: comment
               id: comment
-              uses: m31415/actions-test@v1.1
+              uses: m31415/actions-test@v1.7
               with:
-                  comment: "Hey Maik :)"
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
