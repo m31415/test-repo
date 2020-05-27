@@ -9,4 +9,4 @@ jobs:
               id: comment
               uses: m31415/actions-test@v1.1
               with:
-                  comment: "Hey Maik :)"
+                  comment: "Hey Maik :) v1.1"
