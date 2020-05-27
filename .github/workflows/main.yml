@@ -7,6 +7,6 @@ jobs:
         steps:
             - name: comment
               id: comment
-              uses: m31415/actions-test@v1.6
+              uses: m31415/actions-test@v1.7
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
