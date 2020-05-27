@@ -1,6 +1,6 @@
 on:
     pull_request:
-        types: [created]
+        types: [opened]
 
 jobs:
     review_pr_comment:
