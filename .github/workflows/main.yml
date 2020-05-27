@@ -1,15 +1,12 @@
-on: [push]
+on: [pull_request]
 
 jobs:
-    hello_world_job:
+    review_pr_comment:
         runs-on: ubuntu-latest
-        name: A job to say hello
+        name: comment PR
         steps:
-            - name: Hello world action step
-              id: hello
-              uses: m31415/actions-test@v1
+            - name: comment
+              id: comment
+              uses: m31415/actions-test@v1.1
               with:
-                  who-to-greet: "Hey Maik :)"
-            # Use the output from the `hello` step
-            - name: Get the output time
-              run: echo "The time was ${{ steps.hello.outputs.time }}"
+                  comment: "Hey Maik :)"
